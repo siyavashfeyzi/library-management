@@ -14,7 +14,7 @@ def getAllBooks(request):
     for book in query_set:
         print(book)
 
-    return render(request, "getAllBooks.html")
+    return render(request, "getAllBooks.html", {"Books": query_set})
 
 
 def getAllMembers(request):
@@ -23,7 +23,7 @@ def getAllMembers(request):
     for member in query_set:
         print(member)
 
-    return render(request, "getAllMember.html")
+    return render(request, "getAllMember.html", {"Members": query_set})
 
 
 def getAllOrders(request):
@@ -32,4 +32,4 @@ def getAllOrders(request):
     for order in query_set:
         print(order)
 
-    return render(request, "getAllOrders.html")
+    return render(request, "getAllOrders.html", {"Orders": query_set})
