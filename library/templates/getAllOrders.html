@@ -1,1 +1,29 @@
-<h1>see all orders</h1>
+<thml>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>see all orders</h1>
+
+        <table border="1">
+            <thead>
+                <th>ID</th>
+                <th>Book ID</th>
+                <th>Member ID</th>
+                <th>Ordered Date</th>
+                <th>Expiry Date</th>
+                <th>Recovered</th>
+            </thead>
+            {% for Order in Orders %}
+            <tr>   
+            <td>{{Order.id}}</td>
+            <td>{{Order.book_id}}</td>
+            <td>{{Order.member_id}}</td>
+            <td>{{Order.orderedDate}}</td>
+            <td>{{Order.expiryDate}}</td>
+            <td>{{Order.recovered}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
