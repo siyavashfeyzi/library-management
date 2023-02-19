@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 class Book(models.Model):
     name = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
-    isbn = models.PositiveIntegerField()
+    isbn = models.PositiveIntegerField(null=True)
 
 
 class Member(models.Model):
